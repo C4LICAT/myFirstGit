@@ -8,4 +8,9 @@ app.use(express.static(__dirname + "/public"), (_, res, next) => {
   res.sendFile(__dirname + "/404.html")
 });
 
+app.get('/zelda', (req, res) => {
+  res.sendFile("zelda.html", {root: __dirname});
+})
+app.use(express.static('Public'));
+
 app.listen(8080);
