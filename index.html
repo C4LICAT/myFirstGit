@@ -1,2 +1,135 @@
-<h1>Hi</h1>
-<p>mewo</p>
+<!DOCTYPE html>
+<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glitch Hub</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet2" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+    </style>
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <div class="header">
+      <h1>Welcome To The Glitchy Galactic hub</h1>
+      <p>(Cool Stuff)</p>
+    </div>
+    <div class="navbar">
+      <a href="/link1.html">Glitch Ball</a>
+      <a href="/link2.html">Our Roblox Game</a>
+      <div class="dropdown">
+        <button class="dropbtn">Creations &darr;
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a onclick="game1();">Ancient Run</a>
+          <a href="#">game2</a>
+          <a href="#">game3</a>
+          <a href="#">game4</a>
+          <a href="#">game5</a>
+          <a href="#">game6</a>
+        </div>
+      </div> 
+    </div>
+    <div class="row">
+      <div class="main"></div>
+      <div class="side"></div>
+    </div>
+    <div class="footer">
+      <span><h2>By: </h2><a href="https://replit.com/@Calicat">Calicat_</a><h2> and </h2><a href="https://replit.com/@Nebulafire">Nebulafire</a></span>
+    </div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="sweetalert2.all.min.js"></script>
+<script>
+	function game1() {
+  Swal.fire({
+  icon: 'info',
+  title: 'AncientRun',
+  showDenyButton: true,
+  showCancelButton: false,
+  confirmButtonText: 'Goto Game',
+  denyButtonText: `Cancel`,
+  text: 'Game By: Calicat_, Nebulafire and ryrypikachu11',
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    window.location.replace("https://ancientrun.californiacat12.repl.co");
+  } else if (result.isDenied) {
+    let timerInterval
+Swal.fire({
+  position: 'top-end',
+  title: 'Canceled!',
+  html: 'I will close in <b></b> milliseconds.',
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+})
+  }
+})
+}
+
+function game2() {
+  Swal.fire({
+  icon: 'info',
+  title: 'Multi Pong',
+  showDenyButton: true,
+  showCancelButton: false,
+  confirmButtonText: 'Goto Game',
+  denyButtonText: `Cancel`,
+  text: 'Game By: Calicat_, Nebulafire, ryrypikachu11 and legoman68',
+}).then((result) => {
+  /* Read more about isConfirmed, isDenied below */
+  if (result.isConfirmed) {
+    window.location.replace("https://Multi-Pong.glitchygalacticcode.repl.co");
+  } else if (result.isDenied) {
+    Swal.fire({
+      icon: 'success',
+      title: 'Okay!',
+      showDenyButton: false,
+      showCancelButton: false,
+      showConfirmButton: false,
+      timer: 1500
+    })
+  }
+})
+}
+</script>
+
+<script>
+const myTimeout = setTimeout(myGreeting, 300000);
+
+function myGreeting() {
+  alert("You are AFK!");
+}
+
+function myStopFunction() {
+  clearTimeout(myTimeout);
+}
+</script>
+
+  
